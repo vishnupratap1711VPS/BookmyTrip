@@ -68,7 +68,12 @@ body {
   .bg-white,
   .bg-gray-50,
   .bg-gray-100,
-  .bg-gray-200,
+  .bg-gray-200
+) {
+  background-color: var(--app-surface) !important;
+}
+
+html[data-app-theme-tone="dark"] .app-shell :is(
   .bg-gray-800,
   .bg-gray-900,
   .bg-gray-950,
@@ -101,17 +106,11 @@ body {
   background-color: var(--app-theme-accent) !important;
 }
 
-.app-shell [class*="bg-white/"],
 .app-shell [class*="bg-gray-50/"],
 .app-shell [class*="bg-gray-100/"],
 .app-shell [class*="bg-gray-200/"],
-.app-shell [class*="bg-black/"],
 .app-shell [class*="bg-primary/"] {
   background-color: var(--app-surface-soft) !important;
-}
-
-.app-shell [class*="bg-gradient-to-"] {
-  background-image: linear-gradient(135deg, var(--app-surface-strong), var(--app-bg), color-mix(in srgb, var(--app-theme-accent) 22%, var(--app-bg))) !important;
 }
 
 .app-shell :is(
